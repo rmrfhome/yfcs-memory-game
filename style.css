@@ -1,0 +1,38 @@
+#page-layout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#page-layout div {
+    border-radius: 1rem;
+}
+
+#board-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#status-bar {
+    display: flex;
+    padding: 1rem;
+    background-color: lightgrey;
+}
+
+#board {
+    padding: 1rem;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.cell {
+    display: inline-flex;
+    border: 1px solid black;
+    height: 5rem;
+    width: 5rem;
+}
