@@ -1,23 +1,34 @@
-const colours = ["red", "green", "blue"];
-
 function getCells() {
     return document.getElementsByClassName("cell");
 }
 
-function numerateCells() {
-    const cells = getCells();
-    for (var i = 0; i < cells.length; i++) {
-        const cell = cells[i];
-        cell.setAttribute("data-index", i);
-    }
-}
 
 function cellClick(evt) {
     const cell = evt.target;
-    const index = cell.getAttribute("data-index");
-    console.log(index)
+    const color = cell.getAttribute("data-color");
+    console.log("color: ", color)
+}
+
+function getRandomColor() {
+    const colors = ["red", "green", "blue"];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+}
+
+function colorCells() {
+    const cells = getCells();
+    for (var i = 0; i < cells.length; i++) {
+        const cell = cells[i];
+        const color = getRandomColor();
+        cell.style.backgroundColor = color;
+        cell.setAttribute("data-color", color);
+        window.setTimeout(
+            () => { cell.style.backgroundColor = null; },
+            5000
+        )
+    }
 }
 
 function initialize() {
-    numerateCells();
+    colorCells();
 }
