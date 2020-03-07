@@ -19,6 +19,11 @@
     display: flex;
     padding: 1rem;
     background-color: lightgrey;
+    transition: background-color 0.3s;
+}
+
+#status-bar:hover {
+    background-color: gray;
 }
 
 #board {
@@ -37,4 +42,9 @@
     height: 5rem;
     width: 5rem;
     transition: background-color 2s;
+    box-sizing: border-box;
+}
+
+.cell:hover {
+    border-width: 2px;
 }

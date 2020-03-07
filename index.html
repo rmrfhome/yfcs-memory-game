@@ -3,6 +3,11 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            startNewRound();
+        });
+    </script>
 </head>
 
 <body>
@@ -10,29 +15,24 @@
         <div id="board-container">
             <div id="board">
                 <div class="row">
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
                 </div>
                 <div class="row">
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
                 </div>
                 <div class="row">
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
-                    <div class="cell" onclick="cellClick(event)"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
                 </div>
             </div>
         </div>
-        <div id="status-bar">Wait...</div>
+        <div id="status-bar"></div>
     </div>
-    <script>
-        window.addEventListener('load', () => {
-            initialize();
-        });
-    </script>
 </body>
 
 </html>
